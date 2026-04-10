@@ -10,13 +10,17 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Project {
+public class UsageLog {
 
     Long id;
-    String name;
     User user;
-    Boolean isPublic = false;
+
+    Project project;
+    String action;
+
+    Integer tokensUsed;
+    Integer durationMs;
+
+    String metaData;
     Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
 }

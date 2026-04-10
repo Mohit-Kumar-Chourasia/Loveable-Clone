@@ -1,5 +1,6 @@
 package com.projects.Loveable_Clone.entity;
 
+import com.projects.Loveable_Clone.enums.MessageRole;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,13 +11,17 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Project {
+public class ChatMessage {
 
     Long id;
-    String name;
-    User user;
-    Boolean isPublic = false;
+    ChatSession session;
+
+    String content;
+    String toolCalls;
+
+    Integer tokensUsed;
+
     Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
+
+    MessageRole role;
 }

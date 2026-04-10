@@ -1,5 +1,6 @@
 package com.projects.Loveable_Clone.entity;
 
+import com.projects.Loveable_Clone.enums.ProjectRole;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,13 +11,14 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Project {
+public class ProjectMember {
+    ProjectMemberId id;
 
-    Long id;
-    String name;
+    Project project;
+    ProjectRole role;
     User user;
-    Boolean isPublic = false;
-    Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
+
+    Instant invitedAt;
+    Instant acceptedAt;
+
 }

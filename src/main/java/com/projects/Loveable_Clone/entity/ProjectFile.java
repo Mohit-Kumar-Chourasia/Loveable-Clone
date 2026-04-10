@@ -10,13 +10,15 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Project {
-
+public class ProjectFile {
     Long id;
-    String name;
-    User user;
-    Boolean isPublic = false;
+    Project project;
+    String path;
+    String minioObjectKey;
     Instant createdAt;
     Instant updatedAt;
     Instant deletedAt;
+
+    User createdBy;
+    User updatedBy;
 }

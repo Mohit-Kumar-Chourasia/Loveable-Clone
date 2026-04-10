@@ -5,18 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-import java.time.Instant;
-
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Project {
+public class ProjectMemberId {
+    Long projectId;
+    Long userId;
 
-    Long id;
-    String name;
-    User user;
-    Boolean isPublic = false;
-    Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
 }
